@@ -6,6 +6,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Coraline Chu</title>
   <style>
+        /* ---------- Projects (cards) ---------- */
+    .project-card {
+      display: grid;
+      grid-template-columns: 180px 1fr;  /* image | text */
+      gap: 1rem;
+      align-items: start;
+      padding: 0.75rem;
+      border: 1px solid #eee;
+      border-radius: 10px;
+      background: #fff;
+      transition: box-shadow .2s ease, transform .2s ease;
+      margin-bottom: 1rem;               /* space between cards */
+    }
+    .project-card:hover { box-shadow: 0 8px 20px rgba(0,0,0,0.06); transform: translateY(-1px); }
+    
+    .project-thumb {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    
+    .project-title { margin: 0 0 .25rem 0; font-size: 1.1rem; }
+    .project-summary { margin: 0 0 .5rem 0; }
+    
+    .pill-link {
+      display: inline-block;
+      margin-right: .4rem;
+      padding: .24rem .6rem;
+      font-size: .85rem;
+      text-decoration: none;
+      border: 1px solid var(--primary-color);
+      border-radius: 999px;
+      color: var(--primary-color);
+    }
+    .pill-link:hover { background: var(--primary-color); color: #fff; }
+    
+    @media (max-width: 768px) {
+      .project-card { grid-template-columns: 1fr; }
+      .project-thumb { aspect-ratio: 16 / 9; }
+    }
+
     :root {
       --primary-color: #2c3e50;
       --secondary-color: #34495e;
@@ -386,6 +429,7 @@
   
 </body>
 </html>
+
 
 
 
